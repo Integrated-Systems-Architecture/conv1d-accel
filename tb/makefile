@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0 WITH SHL-2.1
 #
 # File: makefile
-# Author: Michele Caon, Luigi Giuffrida
+# Author: Luigi Giuffrida
 # Date: 20/11/2024
 # Description: Makefile for conv1d application.
 

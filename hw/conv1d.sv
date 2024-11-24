@@ -11,7 +11,6 @@
 // File: cnt.sv
 // Author(s):
 //   Luigi Giuffrida
-//   Michele Caon
 // Date: 08/11/2024
 // Description: conv1d accelerator top module
 

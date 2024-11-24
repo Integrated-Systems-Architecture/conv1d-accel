@@ -10,7 +10,7 @@
 //
 // File: conv1d_obi_pkg.sv
 // Author(s):
-//   Michele Caon
+//   Luigi Giuffrida
 // Date: 10/11/2024
 // Description: OBI interface definitions
 

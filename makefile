@@ -104,4 +104,5 @@ vendor-update:
 
 .PHONY: clean
 clean:
-	rm -rf $(BUILD_DIR)
+	$(RM) -r $(BUILD_DIR)
+	$(RM) tb/data.h tb/data.c

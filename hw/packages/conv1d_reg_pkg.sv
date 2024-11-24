@@ -10,7 +10,7 @@
 //
 // File: conv1d_reg_pkg.sv
 // Author(s):
-//   Michele Caon
+//   Luigi Giuffrida
 // Date: 07/11/2024
 // Description: Register Interface signal definitions
 

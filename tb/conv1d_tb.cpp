@@ -11,7 +11,6 @@
 // File: conv1d.cpp
 // Author(s):
 //   Luigi Giuffrida
-//   Michele Caon
 // Date: 08/11/2024
 // Description: TB for the OBI CONV1D accelerator
 

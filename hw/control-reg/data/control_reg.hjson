@@ -10,7 +10,7 @@
 //
 // File: control_reg.hjson
 // Author(s):
-//   Michele Caon
+//   Luigi Giuffrida
 // Date: 07/11/2024
 // Description: Control register description for regtool.py
 
@@ -40,6 +40,7 @@
                     hwaccess: "hro",
                     resval: "0",
                 }
+                // TODO: add more fields if needed
             ],
             swaccess: "rw",
             hwaccess: "hro",

@@ -10,7 +10,7 @@
 //
 // File: conv1d_tb_wrapper.sv
 // Author(s):
-//   Michele Caon
+//   Luigi Giuffrida
 // Date: 10/11/2024
 // Description: Wrapper for Verilator TB
 

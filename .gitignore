@@ -3,9 +3,14 @@ build
 
 # Automatically generated files
 hw/misc/verilator-waivers.vlt
+tb/data.h
+tb/data.c
 
 # Private directory
 private/
+
+# Python cache
+__pycache__/
 
 # Visual Studio Code settings
 .vscode/

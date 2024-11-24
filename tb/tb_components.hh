@@ -10,6 +10,7 @@
 //
 // File: tb_components.hh
 // Author(s):
+//   Luigi Giuffrida
 //   Michele Caon
 // Date: 08/11/2024
 // Description: Testbench components

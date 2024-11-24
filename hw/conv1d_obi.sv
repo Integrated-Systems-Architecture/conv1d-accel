@@ -10,7 +10,7 @@
 //
 // File: conv1d_obi.sv
 // Author(s):
-//   Michele Caon
+//   Luigi Giuffrida
 // Date: 07/11/2024
 // Description: OBI bus wrapper for the conv1d accelerator
 
