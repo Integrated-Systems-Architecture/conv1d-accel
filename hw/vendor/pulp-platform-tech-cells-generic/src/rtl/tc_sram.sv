@@ -78,7 +78,7 @@ module tc_sram #(
 );
 
   // memory array
-  data_t sram [NumWords-1:0];
+  data_t [NumWords-1:0] sram;
   // hold the read address when no read access is made
   addr_t [NumPorts-1:0] r_addr_q;
 

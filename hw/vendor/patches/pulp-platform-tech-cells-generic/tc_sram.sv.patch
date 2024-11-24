@@ -1,34 +1,13 @@
 diff --git a/src/rtl/tc_sram.sv b/src/rtl/tc_sram.sv
-index b702a11..2a35045 100644
+index 98298d6..3e48bab 100644
 --- a/src/rtl/tc_sram.sv
 +++ b/src/rtl/tc_sram.sv
-@@ -59,9 +59,9 @@ module tc_sram #(
-   parameter int unsigned ByteWidth    = 32'd8,    // Width of a data byte
-   parameter int unsigned NumPorts     = 32'd2,    // Number of read and write ports
-   parameter int unsigned Latency      = 32'd1,    // Latency when the read data is available
--  parameter              SimInit      = "none",   // Simulation initialization
-+  parameter string       SimInit      = "none",   // Simulation initialization
-   parameter bit          PrintSimCfg  = 1'b0,     // Print configuration
--  parameter              ImplKey      = "none",   // Reference to specific implementation
-+  parameter string       ImplKey      = "none",   // Reference to specific implementation
-   // DEPENDENT PARAMETERS, DO NOT OVERWRITE!
-   parameter int unsigned AddrWidth = (NumWords > 32'd1) ? $clog2(NumWords) : 32'd1,
-   parameter int unsigned BeWidth   = (DataWidth + ByteWidth - 32'd1) / ByteWidth, // ceil_div
-@@ -88,12 +88,14 @@ module tc_sram #(
+@@ -78,7 +78,7 @@ module tc_sram #(
+ );
  
-   // SRAM simulation initialization
-   data_t init_val[NumWords-1:0];
-+  data_t rand_data;
-   initial begin : proc_sram_init
-     for (int unsigned i = 0; i < NumWords; i++) begin
-+      rand_data = $urandom();
-       case (SimInit)
--        "zeros":  init_val[i] = {DataWidth{1'b0}};
--        "ones":   init_val[i] = {DataWidth{1'b1}};
--        "random": init_val[i] = {DataWidth{$urandom()}};
-+        string'("zeros"):  init_val[i] = {DataWidth{1'b0}};
-+        string'("ones"):   init_val[i] = {DataWidth{1'b1}};
-+        string'("random"): init_val[i] = {rand_data[DataWidth-1:0]};
-         default:  init_val[i] = {DataWidth{1'bx}};
-       endcase
-     end
+   // memory array
+-  data_t sram [NumWords-1:0];
++  data_t [NumWords-1:0] sram;
+   // hold the read address when no read access is made
+   addr_t [NumPorts-1:0] r_addr_q;
+ 
