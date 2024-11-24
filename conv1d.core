@@ -128,7 +128,7 @@ targets:
         - '--x-initial unique'
         #- '--threads 2' # only use with Verilator v5.XXX
         - '--exe'
-        - 'cnt_tb.cpp'
+        - 'conv1d_tb.cpp'
         - '-Wall'
         - '-Wpedantic'
 
