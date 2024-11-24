@@ -2,15 +2,15 @@
 // Solderpad Hardware License, Version 2.1, see LICENSE.md for details.
 // SPDX-License-Identifier: Apache-2.0 WITH SHL-2.1
 {
-  name: "pulp_platform_tech_cells_generic",
-  target_dir: "pulp_platform_tech_cells_generic",
+  name: "pulp-platform-tech-cells-generic",
+  target_dir: "pulp-platform-tech-cells-generic",
 
   upstream: {
     url: "https://github.com/pulp-platform/tech_cells_generic.git",
     rev: "e6226a6f374eb88fed84d4989bb3f066cb470f33",
   },
 
-  patch_dir: "patches/pulp_platform_tech_cells_generic",
+  patch_dir: "patches/pulp-platform-tech-cells-generic",
 
   exclude_from_upstream: [
     "scripts",

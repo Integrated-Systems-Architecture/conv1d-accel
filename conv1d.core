@@ -24,11 +24,25 @@ filesets:
     files:
     - hw/packages/conv1d_obi_pkg.sv
     - hw/packages/conv1d_reg_pkg.sv
+    - hw/packages/conv1d_sram_pkg.sv
     - hw/control-reg/rtl/conv1d_control_reg_pkg.sv
     - hw/control-reg/rtl/conv1d_control_reg_top.sv
     - hw/control-reg/conv1d_control_reg.sv
     - hw/conv1d.sv
     - hw/conv1d_obi.sv
+    - hw/conv1d_obi_to_sram_gnt.sv
+    file_type: systemVerilogSource
+
+  # Simulation memory model
+  rtl-simulation:
+    files:
+    - hw/simulation/conv1d_sram_wrapper.sv
+    file_type: systemVerilogSource
+  
+  # Vendored simulation RTL models
+  rtl-simulation-vendor:
+    files:
+    - hw/vendor/pulp-platform-tech-cells-generic/src/rtl/tc_sram.sv
     file_type: systemVerilogSource
 
   # Vendored RTL files
@@ -92,7 +106,12 @@ targets:
     filesets:
     - rtl
     - rtl_vendor ? (rtl-vendor)
+    - target_sim ? (rtl-simulation)
+    - target_sim ? (rtl-simulation-vendor)
     - target_sim ? (tool_verilator ? (verilator-waivers))
+    - target_sim-opt ? (rtl-simulation)
+    - target_sim-opt ? (rtl-simulation-vendor)
+    - target_sim-opt ? (tool_verilator ? (verilator-waivers))
     generate: [waivers]
     toplevel: cnt
 

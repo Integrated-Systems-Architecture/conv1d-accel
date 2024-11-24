@@ -21,6 +21,10 @@ lint_off -rule WIDTH -file "*/conv1d_control_reg_top.sv" -match "Operator ASSIGN
 
 // PULP files
 lint_off -rule PINCONNECTEMPTY -file "*/prim_subreg_shadow.sv" -match "Cell pin connected by name with empty reference: '*'"
+lint_off -rule WIDTH -file "*/tc_sram.sv" -match "Operator ASSIGN expects 1 bits on the Assign RHS, but Assign RHS's RAND generates 32 bits."
+lint_off -rule WIDTH -file "*/tc_sram.sv" -match "Operator CASE expects 48 bits on the Case expression, but Case expression's VARREF 'SimInit' generates 32 bits."
+lint_off -rule UNUSED -file "*/tc_sram.sv" -match "Parameter is not used: 'PrintSimCfg'"
+lint_off -rule UNSIGNED -file "*/tc_sram.sv" -match "Comparison is constant due to unsigned arithmetic"
 
 // OBI bridge
 lint_off -rule UNUSED -file "*/conv1d_obi.sv" -match "Bits of signal are not used: *"

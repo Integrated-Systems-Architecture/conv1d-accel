@@ -46,7 +46,10 @@ module conv1d_obi (
   // conv1d instance
   conv1d u_conv1d (
     .clk_i (clk_i),
-    .rst_ni(rst_ni)
+    .rst_ni(rst_ni),
+
+    .mem_req_i(obi_req_i),
+    .mem_rsp_o(obi_rsp_o)
 
     // TODO: Define the conv1d accelerator interface and connect it to the obi wrapper
 
