@@ -55,6 +55,11 @@ verilator-run:
 		--log_level $(LOG_LEVEL)
 		$(FUSESOC_ARGS)
 
+## Generate input data
+.PHONY: gen-data
+gen-data:
+	$(MAKE) -C tb
+
 # Open waveform dump with GTKWave
 .PHONY: waves
 waves: $(BUILD_DIR)/sim-common/waves.fst | .check-gtkwave
