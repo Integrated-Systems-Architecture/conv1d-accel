@@ -27,6 +27,8 @@ FUSESOC := $(shell which fusesoc)
 PYTHON  := $(shell which python)
 endif
 
+APP_PARAMS 		?= --in_len 8 --in_ch 4 --k_len 3 --k_num 2 --stride 1 --padding 0
+
 # ----- TARGETS ----- #
 
 ## Default target
@@ -58,7 +60,7 @@ verilator-run:
 ## Generate input data
 .PHONY: gen-data
 gen-data:
-	$(MAKE) -C tb
+	$(MAKE) -C tb $(APP_PARAMS)
 
 # Open waveform dump with GTKWave
 .PHONY: waves
